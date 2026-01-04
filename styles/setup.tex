@@ -1,0 +1,127 @@
+% ============================================================================
+% STYLE AND FORMATTING SETUP
+% ============================================================================
+% This file contains all formatting, fonts, colors, and layout settings
+% ============================================================================
+
+% ============================================================================
+% PACKAGES
+% ============================================================================
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{geometry}
+\usepackage{xcolor}
+\usepackage{fontspec} % For custom fonts (requires XeLaTeX or LuaLaTeX)
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{colortbl} % For colored table rows
+
+% ============================================================================
+% PAGE LAYOUT
+% ============================================================================
+\geometry{
+    a4paper,
+    left=2.5cm,
+    right=2.5cm,
+    top=3cm,
+    bottom=2.5cm,
+    headheight=22pt
+}
+
+% ============================================================================
+% COLORS
+% ============================================================================
+% Define the main color #000090 (dark blue)
+\definecolor{maincolor}{HTML}{000090}
+\definecolor{darkblue}{HTML}{000090}
+\definecolor{black}{HTML}{000000}
+
+% ============================================================================
+% FONTS
+% ============================================================================
+% Verdana font setup (requires XeLaTeX or LuaLaTeX)
+% If Verdana is not available, uncomment one of the alternatives below
+\setmainfont{Verdana}[
+    BoldFont = Verdana Bold,
+    ItalicFont = Verdana Italic,
+    BoldItalicFont = Verdana Bold Italic
+]
+
+% Alternative if Verdana is not available:
+% \setmainfont{DejaVu Sans}
+% or use with pdflatex:
+% \usepackage{verdana}
+% or
+% \renewcommand{\familydefault}{\sfdefault}
+
+% ============================================================================
+% SECTION FORMATTING
+% ============================================================================
+\titleformat{\section}
+  {\normalfont\Large\bfseries\color{maincolor}}
+  {\thesection}{1em}{}
+
+\titleformat{\subsection}
+  {\normalfont\large\bfseries\color{maincolor}}
+  {\thesubsection}{1em}{}
+
+\titleformat{\subsubsection}
+  {\normalfont\normalsize\bfseries\color{maincolor}}
+  {\thesubsubsection}{1em}{}
+
+% ============================================================================
+% HEADER AND FOOTER
+% ============================================================================
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\color{maincolor}\small\eventName}
+\fancyhead[R]{\color{maincolor}\small\eventDate}
+\fancyfoot[C]{\color{maincolor}\thepage}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{maincolor}\leaders\hrule height \headrulewidth\hfill}}
+
+% ============================================================================
+% HYPERLINK SETUP
+% ============================================================================
+\hypersetup{
+    colorlinks=true,
+    linkcolor=maincolor,
+    urlcolor=maincolor,
+    citecolor=maincolor,
+    pdfborderstyle={/S/U/W 1}
+}
+
+% ============================================================================
+% CUSTOM COMMANDS
+% ============================================================================
+% Highlighted text in main color
+\newcommand{\highlight}[1]{\textcolor{maincolor}{\textbf{#1}}}
+
+% Important notice box
+\newcommand{\importantbox}[1]{%
+    \vspace{0.3cm}
+    \noindent\fcolorbox{maincolor}{white}{%
+        \parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+            \textcolor{maincolor}{\textbf{Wichtig:}} #1
+        }
+    }
+    \vspace{0.3cm}
+}
+
+% ============================================================================
+% LIST FORMATTING
+% ============================================================================
+\setlist[itemize]{leftmargin=*,label=\textcolor{maincolor}{$\bullet$}}
+\setlist[enumerate]{leftmargin=*}
+
+% ============================================================================
+% TABLE FORMATTING
+% ============================================================================
+% Colored table rules (requires colortbl package)
+% \arrayrulecolor{maincolor}

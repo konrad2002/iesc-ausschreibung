@@ -1,0 +1,30 @@
+% ============================================================================
+% COMPILE SCRIPT - Build all language versions at once
+% ============================================================================
+% This is a helper file to compile all three language versions in sequence
+% Not required, but useful for batch processing
+% ============================================================================
+
+% You can use this with latexmk or create a shell script instead
+% For now, this is just a template/documentation file
+
+% Shell script alternative (create as compile-all.sh):
+% #!/bin/bash
+% echo "Compiling German version..."
+% xelatex ausschreibung-de.tex
+% echo "Compiling Czech version..."
+% xelatex ausschreibung-cs.tex
+% echo "Compiling English version..."
+% xelatex ausschreibung-en.tex
+% echo "All versions compiled!"
+
+% Windows batch file alternative (create as compile-all.bat):
+% @echo off
+% echo Compiling German version...
+% xelatex ausschreibung-de.tex
+% echo Compiling Czech version...
+% xelatex ausschreibung-cs.tex
+% echo Compiling English version...
+% xelatex ausschreibung-en.tex
+% echo All versions compiled!
+% pause

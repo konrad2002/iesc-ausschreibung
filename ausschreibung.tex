@@ -1,0 +1,86 @@
+% ============================================================================
+% AUSSCHREIBUNG - ALL LANGUAGES IN ONE DOCUMENT
+% ============================================================================
+% Compile with: xelatex ausschreibung.tex
+% Or: lualatex ausschreibung.tex
+% 
+% This generates a single PDF containing:
+% - Common pages
+% - German content
+% - Czech content  
+% - English content
+% ============================================================================
+
+\documentclass[a4paper,11pt]{article}
+
+% ============================================================================
+% LOAD CONFIGURATION FILES
+% ============================================================================
+\input{config/variables.tex}
+\input{styles/setup.tex}
+
+% ============================================================================
+% LANGUAGE SETUP - Support for all three languages
+% ============================================================================
+\usepackage[ngerman,czech,english]{babel}
+
+% ============================================================================
+% DOCUMENT
+% ============================================================================
+\begin{document}
+
+% ============================================================================
+% GERMAN SECTION
+% ============================================================================
+\selectlanguage{ngerman}
+
+\input{content/de/titlepage.tex}
+\newpage
+
+\input{content/de/general-info.tex}
+\input{content/de/event-details.tex}
+\input{content/de/categories.tex}
+\input{content/de/registration.tex}
+\input{content/de/rules.tex}
+
+\newpage
+
+% ============================================================================
+% CZECH SECTION
+% ============================================================================
+\selectlanguage{czech}
+
+\input{content/cs/titlepage.tex}
+\newpage
+
+\input{content/cs/general-info.tex}
+\input{content/cs/event-details.tex}
+\input{content/cs/categories.tex}
+\input{content/cs/registration.tex}
+\input{content/cs/rules.tex}
+
+\newpage
+
+% ============================================================================
+% ENGLISH SECTION
+% ============================================================================
+\selectlanguage{english}
+
+\input{content/en/titlepage.tex}
+\newpage
+
+\input{content/en/general-info.tex}
+\input{content/en/event-details.tex}
+\input{content/en/categories.tex}
+\input{content/en/registration.tex}
+\input{content/en/rules.tex}
+
+\newpage
+
+% ============================================================================
+% COMMON CONTENT (multilingual - all languages on same pages)
+% ============================================================================
+\input{content/common/schedule.tex}
+\input{content/common/contact.tex}
+
+\end{document}
