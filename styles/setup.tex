@@ -23,6 +23,8 @@
 \usepackage{colortbl} % For colored table rows
 \usepackage{float}
 \usepackage{longtable}
+\usepackage{tikz} % For absolute positioning of flag images
+\usepackage{eso-pic} % For adding content to pages without affecting text flow
 
 % ============================================================================
 % PAGE LAYOUT
@@ -112,6 +114,15 @@
 % ============================================================================
 % Highlighted text in main color
 \newcommand{\highlight}[1]{\textcolor{maincolor}{\textbf{#1}}}
+
+% Flag in top right corner (absolute positioning, no extra space)
+\newcommand{\flagtopright}[1]{%
+    \AddToShipoutPictureFG*{%
+        \put(\LenToUnit{\paperwidth-1.4cm},\LenToUnit{\paperheight-1cm}){%
+            \includegraphics[width=1.2cm]{images/#1}%
+        }%
+    }%
+}
 
 % Important notice box
 \newcommand{\importantbox}[1]{%
