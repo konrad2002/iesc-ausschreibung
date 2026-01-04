@@ -11,7 +11,8 @@
 % - English content
 % ============================================================================
 
-\documentclass[a4paper,11pt]{article}
+\documentclass[8pt]{extarticle}
+\usepackage{extsizes}
 
 % ============================================================================
 % LOAD CONFIGURATION FILES
@@ -30,6 +31,14 @@
 \begin{document}
 
 % ============================================================================
+% COMMON CONTENT (multilingual - all languages on same pages)
+% ============================================================================
+\input{content/common/10_schedule_saturday.tex}
+\input{content/common/11_schedule_sunday.tex}
+\input{content/common/12_schedule_finals.tex}
+\input{content/common/20_limits.tex}
+
+% ============================================================================
 % GERMAN SECTION
 % ============================================================================
 \selectlanguage{ngerman}
@@ -37,11 +46,12 @@
 \input{content/de/titlepage.tex}
 \newpage
 
-\input{content/de/general-info.tex}
-\input{content/de/event-details.tex}
-\input{content/de/categories.tex}
-\input{content/de/registration.tex}
-\input{content/de/rules.tex}
+\input{content/de/10_general.tex}
+\input{content/de/11_pool_access.tex}
+\input{content/de/20_registration.tex}
+\input{content/de/21_age_groups.tex}
+\input{content/de/22_prices.tex}
+\input{content/de/30_pool.tex}
 
 \newpage
 
@@ -50,14 +60,15 @@
 % ============================================================================
 \selectlanguage{czech}
 
-\input{content/cs/titlepage.tex}
+\input{content/de/titlepage.tex}
 \newpage
 
-\input{content/cs/general-info.tex}
-\input{content/cs/event-details.tex}
-\input{content/cs/categories.tex}
-\input{content/cs/registration.tex}
-\input{content/cs/rules.tex}
+\input{content/cs/10_general.tex}
+\input{content/cs/11_pool_access.tex}
+\input{content/cs/20_registration.tex}
+\input{content/cs/21_age_groups.tex}
+\input{content/cs/22_prices.tex}
+\input{content/cs/30_pool.tex}
 
 \newpage
 
@@ -66,21 +77,16 @@
 % ============================================================================
 \selectlanguage{english}
 
-\input{content/en/titlepage.tex}
+\input{content/de/titlepage.tex}
 \newpage
 
-\input{content/en/general-info.tex}
-\input{content/en/event-details.tex}
-\input{content/en/categories.tex}
-\input{content/en/registration.tex}
-\input{content/en/rules.tex}
+\input{content/en/10_general.tex}
+\input{content/en/11_pool_access.tex}
+\input{content/en/20_registration.tex}
+\input{content/en/21_age_groups.tex}
+\input{content/en/22_prices.tex}
+\input{content/en/30_pool.tex}
 
 \newpage
-
-% ============================================================================
-% COMMON CONTENT (multilingual - all languages on same pages)
-% ============================================================================
-\input{content/common/schedule.tex}
-\input{content/common/contact.tex}
 
 \end{document}
