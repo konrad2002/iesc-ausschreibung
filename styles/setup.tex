@@ -71,13 +71,19 @@
   {\normalfont\Large\bfseries\color{maincolor}}
   {\thesection}{1em}{}
 
+\titlespacing*{\section}{0pt}{0.3em}{0.2em}
+
 \titleformat{\subsection}
   {\normalfont\large\bfseries\color{maincolor}}
   {\thesubsection}{1em}{}
 
+\titlespacing*{\subsection}{0pt}{0.2em}{0.1em}
+
 \titleformat{\subsubsection}
   {\normalfont\normalsize\bfseries\color{maincolor}}
   {\thesubsubsection}{1em}{}
+
+\titlespacing*{\subsubsection}{0pt}{0.2em}{0.1em}
 
 % ============================================================================
 % HEADER AND FOOTER
@@ -129,3 +135,9 @@
 % ============================================================================
 % Colored table rules (requires colortbl package)
 % \arrayrulecolor{maincolor}
+
+% ============================================================================
+% PARAGRAPH FORMATTING
+% ============================================================================
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.5em}

@@ -30,6 +30,8 @@
 % ============================================================================
 \begin{document}
 
+\titlespacing*{\section}{0pt}{1em}{0.7em}
+
 % ============================================================================
 % COMMON CONTENT (multilingual - all languages on same pages)
 % ============================================================================
@@ -43,25 +45,24 @@
 % ============================================================================
 \selectlanguage{ngerman}
 
-\input{content/de/titlepage.tex}
-\newpage
-
 \input{content/de/10_general.tex}
 \input{content/de/11_pool_access.tex}
 \input{content/de/20_registration.tex}
 \input{content/de/21_age_groups.tex}
+\newpage
 \input{content/de/22_prices.tex}
 \input{content/de/30_pool.tex}
+\input{content/de/40_signature.tex}
 
 \newpage
+\setcounter{section}{0}
+\titlespacing*{\section}{0pt}{0.2em}{0.1em}
+\small
 
 % ============================================================================
 % CZECH SECTION
 % ============================================================================
 \selectlanguage{czech}
-
-\input{content/de/titlepage.tex}
-\newpage
 
 \input{content/cs/10_general.tex}
 \input{content/cs/11_pool_access.tex}
@@ -69,16 +70,17 @@
 \input{content/cs/21_age_groups.tex}
 \input{content/cs/22_prices.tex}
 \input{content/cs/30_pool.tex}
+\input{content/cs/40_signature.tex}
 
 \newpage
+\setcounter{section}{0}
+\titlespacing*{\section}{0pt}{0.2em}{0.1em}
+\small
 
 % ============================================================================
 % ENGLISH SECTION
 % ============================================================================
 \selectlanguage{english}
-
-\input{content/de/titlepage.tex}
-\newpage
 
 \input{content/en/10_general.tex}
 \input{content/en/11_pool_access.tex}
@@ -86,6 +88,7 @@
 \input{content/en/21_age_groups.tex}
 \input{content/en/22_prices.tex}
 \input{content/en/30_pool.tex}
+\input{content/en/40_signature.tex}
 
 \newpage
 
