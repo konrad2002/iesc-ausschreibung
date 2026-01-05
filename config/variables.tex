@@ -8,10 +8,17 @@
 % ============================================================================
 % DATES AND YEAR
 % ============================================================================
-\newcommand{\eventYear}{2026}
-\newcommand{\eventDate}{12. Dezember 2026}
-\newcommand{\eventDateCS}{15. června 2026}
-\newcommand{\eventDateEN}{June 15, 2026}
+\newcommand{\eventYear}{2025}
+% Derived year command for age group calculations
+\newcommand{\eventYearMinus}[1]{\the\numexpr\eventYear-#1\relax}
+
+\newcommand{\eventStartDate}{13. Dezember \eventYear}
+\newcommand{\eventStartDateCS}{13. prosinec \eventYear}
+\newcommand{\eventStartDateEN}{December 13, \eventYear}
+
+\newcommand{\eventEndDate}{14. Dezember \eventYear}
+\newcommand{\eventEndDateCS}{14. prosinec \eventYear}
+\newcommand{\eventEndDateEN}{December 14, \eventYear}
 
 \newcommand{\registrationDeadline}{31. Mai 2026}
 \newcommand{\registrationDeadlineCS}{31. května 2026}
@@ -21,25 +28,11 @@
 \newcommand{\entryConfirmationDateCS}{7. června 2026}
 \newcommand{\entryConfirmationDateEN}{June 7, 2026}
 
-% ============================================================================
-% EVENT INFORMATION
-% ============================================================================
-\newcommand{\eventName}{Internationaler Erzgebirgsschwimmcup}
-\newcommand{\eventNameCS}{Mezinárodní plavecké mistrovství}
-\newcommand{\eventNameEN}{International Swimming Championships}
-
-\newcommand{\eventLocation}{Aqua Marien}
-\newcommand{\eventCity}{Marienberg}
-\newcommand{\eventCountry}{Deutschland}
 
 % ============================================================================
 % ORGANIZER INFORMATION
 % ============================================================================
-\newcommand{\organizerName}{ST Erzgebirge e.V.}
-\newcommand{\organizerContact}{Max Mustermann}
-\newcommand{\organizerEmail}{info@schwimmclub-wien.at}
-\newcommand{\organizerPhone}{+43 1 234 5678}
-\newcommand{\organizerWebsite}{www.schwimmclub-wien.at}
+
 
 % ============================================================================
 % FEES AND COSTS
@@ -49,30 +42,12 @@
 \newcommand{\lateFee}{€ 3,00}
 
 % ============================================================================
-% TECHNICAL INFORMATION
-% ============================================================================
-\newcommand{\poolLength}{50m}
-\newcommand{\numberOfLanes}{8}
-\newcommand{\timingSystem}{Omega}
-\newcommand{\poolType}{Langbahn}
-\newcommand{\poolTypeCS}{dlouhá dráha}
-\newcommand{\poolTypeEN}{long course}
-
-% ============================================================================
-% SESSION TIMES
-% ============================================================================
-\newcommand{\morningWarmup}{08:00 - 09:30 Uhr}
-\newcommand{\morningSession}{10:00 Uhr}
-\newcommand{\afternoonWarmup}{14:00 - 15:30 Uhr}
-\newcommand{\afternoonSession}{16:00 Uhr}
-
-% ============================================================================
 % AGE GROUPS
 % ============================================================================
 % Define age groups based on event year
 \newcommand{\ageGroupOne}{Jahrgang \eventYear\ und jünger}
-\newcommand{\ageGroupTwo}{Jahrgang 2024 - 2023}
-\newcommand{\ageGroupThree}{Jahrgang 2022 - 2021}
+\newcommand{\ageGroupTwo}{Jahrgang \eventYearMinus{1}\ - \eventYearMinus{2}}
+\newcommand{\ageGroupThree}{Jahrgang \eventYearMinus{2}\ - \eventYearMinus{3}}
 % Add more age groups as needed
 
 % ============================================================================
@@ -84,5 +59,21 @@
 %  schedule table elements
 % =========================
 
+% ============================================================================
+%  EVENT GENDERS
+% ============================================================================
+
 \newcommand{\scheduleGenderFemale}{Frauen - Women - Ženy}
 \newcommand{\scheduleGenderMale}{Männer - Men - Muži}
+
+% ============================================================================
+%  EVENT STYLES
+% ============================================================================
+
+\newcommand{\scheduleStyleFly}{Delphin - Butterfly - Motýlek}
+\newcommand{\scheduleStyleBack}{Rücken - Backstroke - Znak}
+\newcommand{\scheduleStyleBreast}{Brust - Breaststroke - Prsa}
+\newcommand{\scheduleStyleFree}{Freistil - Freestyle - Volný způsob}
+\newcommand{\scheduleStyleMedley}{Lagen - Ind. Medley - P. závod}
+
+\newcommand{\scheduleAgeAndOlder}{und älter, and older, a starší}
