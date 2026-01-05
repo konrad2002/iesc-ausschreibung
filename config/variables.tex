@@ -9,6 +9,7 @@
 % DATES AND YEAR
 % ============================================================================
 \newcommand{\eventYear}{2025}
+\newcommand{\eventIteration}{28}
 % Derived year command for age group calculations
 \newcommand{\eventYearMinus}[1]{\the\numexpr\eventYear-#1\relax}
 
@@ -20,44 +21,57 @@
 \newcommand{\eventEndDateCS}{14. prosinec \eventYear}
 \newcommand{\eventEndDateEN}{December 14, \eventYear}
 
-\newcommand{\registrationDeadline}{31. Mai 2026}
-\newcommand{\registrationDeadlineCS}{31. května 2026}
-\newcommand{\registrationDeadlineEN}{May 31, 2026}
+\newcommand{\registrationDeadline}{2. Dezember \eventYear} % must be a Tuesday
+\newcommand{\registrationDeadlineCS}{2. prosinec \eventYear}
+\newcommand{\registrationDeadlineEN}{December 2, \eventYear}
 
-\newcommand{\entryConfirmationDate}{7. Juni 2026}
-\newcommand{\entryConfirmationDateCS}{7. června 2026}
-\newcommand{\entryConfirmationDateEN}{June 7, 2026}
+\newcommand{\deregistrationDeadline}{11. Dezember \eventYear} % must be a Thursday
+\newcommand{\deregistrationDeadlineCS}{11. prosinec \eventYear}
+\newcommand{\deregistrationDeadlineEN}{December 11, \eventYear}
 
+\newcommand{\entryConfirmationDate}{7. Dezember \eventYear} % must be a Sunday
+\newcommand{\entryConfirmationDateCS}{7. prosinec \eventYear}
+\newcommand{\entryConfirmationDateEN}{December 7, \eventYear}
 
-% ============================================================================
-% ORGANIZER INFORMATION
-% ============================================================================
-
+\newcommand{\earlyRegistrationDate}{31. Oktober \eventYear} % no special week day required
+\newcommand{\earlyRegistrationDateCS}{31. říjen \eventYear}
+\newcommand{\earlyRegistrationDateEN}{October 31, \eventYear}
 
 % ============================================================================
 % FEES AND COSTS
 % ============================================================================
-\newcommand{\entryFeeSingle}{€ 8,00}
-\newcommand{\entryFeeRelay}{€ 12,00}
-\newcommand{\lateFee}{€ 3,00}
+
+\newcommand{\poolAdmissionCardPrice}{9}
+\newcommand{\poolAdmissionPrice}{15}
+\newcommand{\poolAdmissionReducedPrice}{10}
+
+\newcommand{\entryEarly}{6}
+\newcommand{\entrySingle}{7}
+\newcommand{\entryRelay}{10}
+\newcommand{\entryFormatPunishment}{0,50}
+\newcommand{\entryRefreePunishment}{2}
 
 % ============================================================================
-% AGE GROUPS
+%  AWARDS
 % ============================================================================
-% Define age groups based on event year
-\newcommand{\ageGroupOne}{Jahrgang \eventYear\ und jünger}
-\newcommand{\ageGroupTwo}{Jahrgang \eventYearMinus{1}\ - \eventYearMinus{2}}
-\newcommand{\ageGroupThree}{Jahrgang \eventYearMinus{2}\ - \eventYearMinus{3}}
-% Add more age groups as needed
 
-% ============================================================================
-% CUSTOM COMMANDS FOR EASY UPDATES
-% ============================================================================
-% You can add more custom commands here for any text that appears multiple times
+\newcommand{\awardNinehundretDSV}{150}
+\newcommand{\awardPoolRecord}{25}
+\newcommand{\awardPoolRecordNinehundretDSV}{50}
 
-% =========================
-%  schedule table elements
-% =========================
+\newcommand{\awardAFinalFirst}{120}
+\newcommand{\awardAFinalSecond}{80}
+\newcommand{\awardAFinalThird}{50}
+\newcommand{\awardAFinalFourth}{20}
+
+\newcommand{\awardBFinalFirst}{30}
+\newcommand{\awardBFinalSecond}{20}
+\newcommand{\awardBFinalThird}{10}
+\newcommand{\awardBFinalFourth}{5}
+
+\newcommand{\awardClubFirst}{150}
+\newcommand{\awardClubSecond}{100}
+\newcommand{\awardClubThird}{50}
 
 % ============================================================================
 %  EVENT GENDERS
